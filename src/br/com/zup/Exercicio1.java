@@ -9,7 +9,7 @@ public class Exercicio1 {
         Scanner leitor = new Scanner(System.in);
 
         //Recebendo dados do Leitor
-        System.out.println("Digite o valor que você receb por hora trabalhada: ");
+        System.out.println("Digite o valor que você recebe por hora trabalhada: ");
         double valorHora = leitor.nextDouble();
         System.out.println("Digite a quantidade de horas trabalhadas no mês: ");
         double qtdHorasTrabalhadas = leitor.nextDouble();
@@ -24,7 +24,7 @@ public class Exercicio1 {
         double descontoImpostoRenda;
         double salarioLiquido;
         double totalDescontos;
-        double valorIRPorcentagem = valorImpostoRenda * 100;
+        double valorIRPorcentagem;
         double valorInssPorcentagem = valorInss * 100;
         double valorFgtsPorcentagem = valorFgts * 100;
 
@@ -44,7 +44,7 @@ public class Exercicio1 {
         descontoImpostoRenda = salarioBruto * valorImpostoRenda;
         totalDescontos = descontoImpostoRenda + descontoInss;
         salarioLiquido = salarioBruto - totalDescontos;
-
+        valorIRPorcentagem = valorImpostoRenda * 100;
 
         //Imprimindo resultados
         System.out.println("Salário Bruto : (" + valorHora + " * " + qtdHorasTrabalhadas + ") : " + salarioBruto);
