@@ -24,35 +24,30 @@ public class Exercicio1 {
         double descontoImpostoRenda;
         double salarioLiquido;
         double totalDescontos;
-
-
-
-        //calcular valor do desconto do Imposto de Renda
-        if (salarioBruto > 0 & salarioBruto <= 900){
-            valorImpostoRenda = 0;
-        }
-        else if (salarioBruto > 900 & salarioBruto <= 1500){
-            valorImpostoRenda = 0.05;
-        }
-        else if (salarioBruto > 1500 & salarioBruto <= 2500){
-            valorImpostoRenda = 0.1;
-        }
-        else if (salarioBruto > 2500){
-            valorImpostoRenda = 0.2;
-        }
-
-
-
-        descontoImpostoRenda = salarioBruto * valorImpostoRenda;
-        totalDescontos = descontoImpostoRenda + descontoInss;
-        salarioLiquido = salarioBruto - totalDescontos;
         double valorIRPorcentagem = valorImpostoRenda * 100;
         double valorInssPorcentagem = valorInss * 100;
         double valorFgtsPorcentagem = valorFgts * 100;
 
 
+        //calcular valor do desconto do Imposto de Renda
+        if (salarioBruto > 0 & salarioBruto <= 900) {
+            valorImpostoRenda = 0;
+        } else if (salarioBruto > 900 & salarioBruto <= 1500) {
+            valorImpostoRenda = 0.05;
+        } else if (salarioBruto > 1500 & salarioBruto <= 2500) {
+            valorImpostoRenda = 0.1;
+        } else if (salarioBruto > 2500) {
+            valorImpostoRenda = 0.2;
+        }
+
+        //calculos
+        descontoImpostoRenda = salarioBruto * valorImpostoRenda;
+        totalDescontos = descontoImpostoRenda + descontoInss;
+        salarioLiquido = salarioBruto - totalDescontos;
+
+
         //Imprimindo resultados
-        System.out.println("Salário Bruto : (" + valorHora + " * " + qtdHorasTrabalhadas + ") : " + salarioBruto );
+        System.out.println("Salário Bruto : (" + valorHora + " * " + qtdHorasTrabalhadas + ") : " + salarioBruto);
         System.out.println("(-) IR (" + valorIRPorcentagem + "%) : " + descontoImpostoRenda);
         System.out.println("(-) INSS (" + valorInssPorcentagem + "%) : " + descontoInss);
         System.out.println("FGTS (" + valorFgtsPorcentagem + "%) : " + valorCalculadoFgts);
