@@ -46,16 +46,22 @@ public class Exercicio1 {
         salarioLiquido = salarioBruto - totalDescontos;
         valorIRPorcentagem = valorImpostoRenda * 100;
 
-        //Imprimindo resultados
-        System.out.println("Salário Bruto : (" + valorHora + " * " + qtdHorasTrabalhadas + ") : " + salarioBruto);
-        System.out.println("(-) IR (" + valorIRPorcentagem + "%) : " + descontoImpostoRenda);
-        System.out.println("(-) INSS (" + valorInssPorcentagem + "%) : " + descontoInss);
-        System.out.println("FGTS (" + valorFgtsPorcentagem + "%) : " + valorCalculadoFgts);
-        System.out.println("Total de descontos  :" + totalDescontos);
-        System.out.println("Salário Líquido : " + salarioLiquido);
 
 
-        //Está faltando só estruturar o que vai imprimir com o printf
+        //imprimir com o printf
+
+        System.out.print("Salário Bruto : (" + valorHora + " * " + qtdHorasTrabalhadas +")");
+        System.out.printf("\t\t\t : R$%10.2f %n", salarioBruto );
+        System.out.print("(-) IR (" + valorIRPorcentagem + "%)") ;
+        System.out.printf("\t\t\t\t\t\t\t : R$%10.2f %n",  descontoImpostoRenda);
+        System.out.print("(-) INSS (" + valorInssPorcentagem + "%)");
+        System.out.printf("\t\t\t\t\t\t : R$%10.2f %n", descontoInss);
+        System.out.print("FGTS (" + valorFgtsPorcentagem + "%)");
+        System.out.printf("\t\t\t\t\t\t\t : R$%10.2f %n", valorCalculadoFgts);
+        System.out.print("Total de descontos ");
+        System.out.printf("\t\t\t\t\t\t : R$%10.2f %n", totalDescontos);
+        System.out.print("Salário Líquido");
+        System.out.printf("\t\t\t\t\t\t\t : R$%10.2f ",salarioLiquido);
 
     }
 
