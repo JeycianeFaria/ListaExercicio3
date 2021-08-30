@@ -24,7 +24,7 @@ public class Exercicio2 {
         //recebendo dados do usúario
         System.out.println("Olá, vamos calcular o valor que você terá que pagar!");
         System.out.println("Por favor, digite qual o tipo de combustível que você abasteceu seguindo a tabela: ");
-        System.out.println("Dígite A - Alcool");
+        System.out.println("Digite A - Alcool");
         System.out.println("Digite G - Gasolina");
         tipoDeCombustivel = leitor.nextLine();
         System.out.println("Agora quantos litros você abasteceu");
@@ -72,11 +72,11 @@ public class Exercicio2 {
 
 
         //Imprimindo Resultados
-        System.out.println("Você abasteceu " + litrosVendidos + " Litros");
-        System.out.println("O valor por litro é R$" + precoLitro);
-        System.out.println("O total a pagar sem desconto é de R$ " + precoSemDesconto);
-        System.out.println("O total de desconto é de R$ " + descontoTotal);
-        System.out.println("O valor final a pagar é de R$ " + precoTotal);
+        System.out.printf("Você abasteceu %.0f %s %n", litrosVendidos, "Litros");
+        System.out.printf("O valor por litro é R$%.2f %n", precoLitro);
+        System.out.printf("O total a pagar sem desconto é de R$%.2f %n", precoSemDesconto);
+        System.out.printf("O total de desconto é de R$%.2f %n", descontoTotal);
+        System.out.printf("O valor final a pagar é de R$%.2f %n", precoTotal);
     }
 
 }

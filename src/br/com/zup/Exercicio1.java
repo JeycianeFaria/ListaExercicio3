@@ -47,7 +47,6 @@ public class Exercicio1 {
         valorIRPorcentagem = valorImpostoRenda * 100;
 
 
-
         //imprimir com o printf
 
         System.out.print("Salário Bruto : (" + valorHora + " * " + qtdHorasTrabalhadas +")");
